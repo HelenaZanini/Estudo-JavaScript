@@ -1,7 +1,7 @@
 // Exc 23
 
 var tabuada = prompt("Escolha o numero para tabuada: ")
-document.write("tabuada de " + tabuada + "<br>");
+document.write("Exc 23: tabuada de " + tabuada + "<br>");
 
 
 for (var index = 0; index < 11; index++) {

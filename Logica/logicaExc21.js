@@ -19,7 +19,3 @@ for (0; y < numArray.length; y++) {
 }
 
 document.write("Soma dos numeros da array: " + soma + "<br>");
-
-
-
-
