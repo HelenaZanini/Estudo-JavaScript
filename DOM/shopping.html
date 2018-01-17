@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./CSS/shopping.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="container">
+        <header class="header">
+            <div class="header__form header__head">
+                <span class="head__info"><span class="head__border">1</span> Shopping Cart</span>
+            </div>
+            <div class="header__form header__head--inactive">
+                <span class="head__info--black"><span class="head__border--black">2</span> Shipping Info</span>
+            </div>
+            <div class="header__form header__head--inactive">
+                <span class="head__info--black"><span class="head__border--black">3</span> Payment Method</span>
+            </div>
+        </header> 
+        <p class="counter-form">You have <span class="counter"></span> on your cart</p>
+        <table class="table">
+            <tr class="table__title">
+                <th class="table__title--big">Name</th>
+                <th class="table__title--small">Price</th>
+                <th class="table__title--small">Quantity</th>
+                <th class="table__title--small">Total</th>
+            </tr>
+            <tr class="grey-line">
+                <td class="table__title--big"></td>
+                <td class="table__title--small"></td>
+                <td class="table__title--small"></td>
+                <td class="table__title--small"></td>
+            </tr>
+            <tr class="grey-line">
+                <td class="table__title--big"></td>
+                <td class="table__title--small"></td>
+                <td class="table__title--small"></td>
+                <td class="table__title--small"></td>
+            </tr>
+            <tr class="grey-line">
+                <td class="table__title--big"></td>
+                <td class="table__title--small"></td>
+                <td class="table__title--small"></td>
+                <td class="table__title--small"></td>
+            </tr>
+            <tr class="grey-line table__subtotal">
+                <td class="table__subtotal--content">Subtotal $<span class="result"></span></td>
+            </tr>
+        </table>
+        <div class="btn">
+            <a><button class="white_btn">Continue Shopping</button></a>
+            <a href = shippingForm.html ><button class="green_btn">Shipping Info</button></a>
+        </div>
+    </section>        
+
+    <script src="./JS/shippingCart.js"></script>
+</body>
+</html>

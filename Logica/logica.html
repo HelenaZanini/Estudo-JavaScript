@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>document</title>
     
     
 </head>
 <body>
 
-    <label for="Seleção">Selecione a questão</label>
-    <input type="number" name="Seleção" id="Seleção" value="" min="1" max="47">
-    <input type="submit" value="Clique para solução do exc" onclick="parametros()">
-    
-    <div id="Questão">
+    <header>
+        <h1>Exercicios de logica da programação em JavaScript</h1>
+    </header>
 
-    </div>
+    <main>
+
+        <label class="comum" for="Seleção">Selecione a questão de 1 a 47</label>
+        <input class="comum" type="number" name="Seleção" id="Seleção" value="" min="1" max="47" onkeyup="questao()" onmouseup="questao()">
+        <input class="comum" type="submit" value="Clique para solução do exc" onclick="respostas()">
+        
+        <div class="comum" id="Questão">
+
+        </div>
     
-    <script src="logica.js"></script>
-    
-    
+    </main>
+
+    <script src="JS/logica.js"></script>
+        
 </body>
 </html>
