@@ -1,8 +1,13 @@
 var resp = 0;
+var questões = [
+
+]
+
+
 
 function parametros () {
     
-    resp = document.getElementById('Q').value;
+    resp = document.getElementById('Seleção').value;
     
     switch (parseInt(resp)) {
         case 1: 
@@ -31,9 +36,6 @@ function parametros () {
             break;
         case 9: 
             exc9();
-            break;
-        case 10: 
-            exc10();
             break;
         case 11: 
             exc11();
@@ -95,12 +97,9 @@ function parametros () {
     }
 }
 
-// function reload () {
-//     location.reload();
-    
-// }
 
-// Exc 1
+// Exc 1 Faça um programa que receba a idade de uma pessoa em anos e
+// imprima essa idade em: Meses, Dias, Horas, Minutos.
 
 function exc1 () {
     var data = parseInt(prompt("Quantos anos voce tem?"));
@@ -115,7 +114,10 @@ function exc1 () {
 }
 
 
-// Exc 2
+// Exc 2 Faça um programa que receba o ano de nascimento de uma pessoa e
+// o ano atual. Calcule e imprima:
+// a. A id ade dessa pessoa
+// b. Essa idade convertida em semana
 
 function exc2 () {
     var anoNasc = parseInt(prompt("Digite o ano que voce nasceu que vou calcular sua idade"));
@@ -128,7 +130,7 @@ function exc2 () {
     document.write("Você tem: " + idade + " anos, ou: " + semana + " semanas")
 }
 
-// Exc 3
+// Exc 3 Faça um programa que receba um número e exiba o seu dobro.
 
 function exc3 () {
     var num = parseInt(prompt("Digite um número que vou dobra-lo"));
@@ -138,7 +140,8 @@ function exc3 () {
     alert("O dobro de seu número é: " + num);
 }
 
-// Exc 4
+// Exc 4 Faça um programa que receba o nome, o peso e a altura de uma
+// pessoa. Calcule e imprima o nome e o IMC dessa pessoa. (IMC = peso/altura2).
 
 function exc4 () {
     var nome = prompt("Vamos calcular seu IMC? Qual seu nome?");
@@ -153,7 +156,9 @@ function exc4 () {
 
 }
 
-// Exc 5
+// Exc 5 Faça um programa que receba a medida em centímetros e exiba esse
+// número em polegadas. OBS: Uma polegada equivale a 2.5
+// centímetros.
 
 function exc5 () {
     var medidaCm = parseInt(prompt("Digite uma medida em cm que vou converte-la para polegadas"));
@@ -163,7 +168,8 @@ function exc5 () {
     alert("Sua medida em polegadas é: " + medidaPol);
 }
 
-// Exc 6
+// Exc 6 Faça um programa que receba a medida em polegadas e exiba esse
+// número em centímetros.
 
 function exc6 () {
     var medidaPol = parseInt(prompt("Digite uma medida em polegadas que vou converte-la para centimetros"));
@@ -173,7 +179,9 @@ function exc6 () {
     alert("Sua medida em centimetros é: " + medidaCm);
 }
 
-// Exc 7
+// Exc 7 Faça um programa que receba o nome, cargo e salário de um
+// funcionário. Calcule o salário acrescido de 10%. Ao final exiba o nome,
+// o cargo e o novo salário desse funcionário.
 
 function exc7 () {
     var nome = prompt("Qual seu nome?");
@@ -189,43 +197,247 @@ function exc7 () {
 
 }
 
-// Exc 8
+// Exc 8 Faça um programa que receba 4 notas de um aluno, calcule e imprima
+// a média aritmética das notas e a mensagem de APROVADO para média
+// superior ou igual a 7,0 ou a mensagem de REPROVADO. 
+
+function exc8 () {
+    var notas = [];
+    var mes = ["Março","Abril","Maio","Junho"];
+
+    for (let index = 0; mes.length; index++) {
+
+        notas.push(parseInt(prompt("Digite a nota do mês de " + mes[index])));
+    }
+
+    var soma = 0;
+
+    for (let index = 0; index < notas.length; index++) {
+        soma = soma + notas[index];
+    }
+
+    var media = soma/notas.length;
+    
+    if (media < 7) {
+        document.write("Nota: " + media + " é abaixo da média, você está reprovado");    
+    } else {
+        document.write("Nota: " + media + " é acima da média, você está aprovado");
+    }
+        
+
+}
+    
+// Exc 9 Uma empresa decide dar aumento de 30% aos funcionários cujo
+// salário é inferior a 500 reais. Escreva um programa que receba o
+// salário de um funcionário e imprima o valor do salário reajustado ou
+// uma mensagem caso o funcionário não tenha direito a aumento
+
+function exc9 () {
+
+    var salario = parseInt(prompt("Qual é o seu salario mensal?"));
+
+    if (salario < 500) {
+
+        salario = salario + salario*0.3;
+
+        alert("Parabens, seu salario foi resjustado para: " + salario);
+    } else {
+        alert("Seu salario continua o mesmo")
+    }
+    
+}
+
+// Exc 11 Faça um programa que receba um número inteiro do usuário e informe
+// se este número é positivo ou negativo.
+
+function exc11 () {
+    
+    var num = parseInt(prompt("Digite um numero que vou adivinhar se é positivo ou negativo"));
+    
+    if (num < 0) {
+        alert("O numero: " + num + " é negativo");
+    } else {
+        alert("O numero: " + num + " é positivo");
+    }
+
+}
+
+// Exc 12 Faça um programa que receba um número do usuário e informe se
+// este número é par ou ímpar.
+
+function exc12 () {
+    
+    var num = parseInt(prompt("Digite um numero que vou adivinhar se é par ou impar"));
+    
+    if (num%2 == 0) {
+        alert("O numero: " + num + " é par");
+    } else {
+        alert("O numero: " + num + " é impar");
+    }
+
+}
+
+// Exc 13 Faça um programa que receba um número de usuário e exiba este
+// número, apenas se for par.
+
+function exc13 () {
+    
+    var num = parseInt(prompt("Digite um numero que vou exibir se for par"));
+    
+    if (num%2 == 0) {
+        alert("O numero: " + num + " é par");
+    } 
+
+}
+
+// Exc 14 Faça um programa que receba o preço de um produto e o seu código
+// de origem e imprima a sua procedência, utilizando uma estrutura IF
+// sem o ELSE, para cada item abaixo.
+
+function exc14 () {
+    
+    var preço = parseInt(prompt("Digite o preço do produto"));
+    var cod = parseInt(prompt("Digite o código de origem de 1 a 30"));
+    
+    if (cod < 1 || cod > 30) {
+        
+        alert("Codigo de origem fora do padrão");    
+        
+    } 
+
+    if (cod == 1) {
+        alert("Codigo de origem do Sul");    
+    }
+
+    if (cod == 2) {
+        alert("Codigo de origem do Norte");    
+    }
+
+    if (cod == 3) {
+        alert("Codigo de origem do Leste");    
+    }
+
+    if (cod == 4) {
+        alert("Codigo de origem do Oeste");    
+    }
+
+    if (cod == 5 || cod == 6) {
+        alert("Codigo de origem do Nordeste");    
+    }
+
+    if (cod >= 7 && cod <= 9) {
+        alert("Codigo de origem do Sudeste");    
+    }
+
+    if (cod >= 10 && cod <= 20) {
+        alert("Codigo de origem do Centro-oeste");    
+    }
+
+    if (cod >= 21 && cod <= 30) {
+        alert("Codigo de origem indefinido");    
+    }
+
+}
 
 
-// Exc 9
+// Exc 15 .Faça um programa que receba 4 notas de um aluno, calcule e imprima
+// a média aritmética das notas e a mensagem de APROVADO para média
+// superior ou igual a 7,0 RECUPERAÇÃO para notas entre 5.0 e 7,0 ou a
+// mensagem de REPROVADO para média inferior a 5,0. 
 
+function exc15 () {
+    var notas = [];
+    var mes = ["Março","Abril","Maio","Junho"];
 
-// Exc 10
+    for (let index = 0; index < mes.length; index++) {
 
+        notas.push(parseInt(prompt("Digite a nota do mês de " + mes[index])));
+    }
 
-// Exc 11
+    var soma = 0;
 
+    for (let index = 0; index < notas.length; index++) {
+        soma = soma + notas[index];
+    }
 
-// Exc 12
+    var media = soma/notas.length;
+    
+    if (media >= 7) {
+        document.write("Nota: " + media + " é acima da média, você está aprovado");    
+    } else if (media < 7 && media >= 5) {
+        document.write("Nota: " + media + " é abaixo da média, mas você ainda tem chance, está de recuperação");
+    } else {
+        document.write("Nota: " + media + " é abaixo da média, você está reprovado");
+    }
+        
 
+}
 
-// Exc 13
+// Exc 16 Uma empresa decide dar aumento aos funcionários de acordo com o
+// seu cargo: Produção = 6,5%; Administrativo = 7,5%; Diretoria = 12%.
 
+function exc16 () {
+    var cargo = prompt("Qual seu cargo: Produção; Diretoria ou Administrativo");
+    var salario = parseInt(prompt("Digite seu saalrio anual"));   
 
-// Exc 14
+    if (cargo == "Produção") {
+        salario = salario + salario * 0.065;
+    } else if (cargo == "Diretoria") {
+        salario = salario + salario * 0.12;
+    } else if (cargo == "Administrativo") {
+        salario = salario + salario * 0.075;
+    }
 
+    alert("Seu salario aumentou! Agora está em: " + salario + " anual");
+}
 
-// Exc 15
+// Exc 17 Faça um programa que receba um número de usuário e exiba este
+// número, apenas se for par. Caso contrário informe apenas “DIGITE
+// APENAS NÚMEROS PARES”
 
+function exc17 () {
+    var num = parseInt(prompt("Digite numero de usuarios do programa"));   
+    
+    if (num % 2 == 0) {
+        alert("O numero de usuarios é: " + num);
+    } else {
+        alert("Digite apenas numeros pares");
+    }
 
-// Exc 16
+}
 
+// Exc 19 Faça um programa que receba a idade de uma pessoa e classifique
+// usando o seguinte critério: 0 a 2 anos = Recém-Nascido; 3 a 11 anos = Criança; 
+// 12 a 19 anos = Adolescente; 20 a 55 anos = Adulto; Acima de 55 anos = Idoso
 
-// Exc 17
+function exc19 () {
+    
+    var idade = parseInt(prompt("Digite o código de origem de 1 a 30"));
+    
+    if (idade == 0 && idade <= 2) {
+        alert("É um Recém-Nascido");    
+      
+    } else if (idade >= 3 && idade <= 11) {
+        alert("É um Criança");    
+      
+    } else if (idade >= 12 && idade <= 19) {
+        alert("É um Adolescente");    
+      
+    } else if (idade >= 20 && idade <= 55) {
+        alert("É um Adulto");    
+      
+    } else if (idade > 55 ) {
+        alert("É um Idoso");    
+      
+    } 
 
+}
 
-// Exc 18
+// Exc 20 Faça um programa que receba o nome, salário e código correspondente
+// ao cargo do funcionário e imprima o seu nome, salário, código, cargo,
+// Percentual de aumento e salário com aumento de acordo com o
+// percentual da tabela abaixo:
 
-
-// Exc 19
-
-
-// Exc 20
 
 
 // Exc 21

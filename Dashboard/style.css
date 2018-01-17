@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header > h1 {
+    max-width: 1200px;
+    width: 100%;
+    position: fixed;
+    z-index: 255;
+    background-color: #fff;
+    text-align: center;
+}
+
+.layout {
+    margin: 0 auto;
+    padding: 5% 0 5% 0;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.box {
+    margin: 1rem 0.25rem;
+    padding: 4rem 2.5rem;
+    height: 360px;
+    max-width: 460px;
+    width: 100%;
+    background-color: #b59ed8;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.box h1 {
+    color: #000066;
+}
+
+.box p {
+    margin: 1.5rem 0 1.5rem 0;
+    color: #fff;
+}
+
+.box button {
+    padding: 1rem;
+    border: none;
+    background-color: #00cc66;
+    color: #fff;
+}
